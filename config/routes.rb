@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
 root "home#top"
 get "about"=>"home#about"
-
+get "works" => "home#works"
+get "message" => "home#message"
 
 end

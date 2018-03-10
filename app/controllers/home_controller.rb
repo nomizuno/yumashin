@@ -6,4 +6,10 @@ class HomeController < ApplicationController
     def about
     end
 
+    def works
+    end
+
+    def message
+    end
+
 end
