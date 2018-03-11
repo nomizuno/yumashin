@@ -1,0 +1,160 @@
+@charset "UTF-8";
+/* モバイルファースト（全環境に共通のデザイン） ================================ */
+/* reset ================================ */
+/* line 4, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 8, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+html {
+  font: 100%/1.5 'Avenir Next', 'Hiragino Sans', sans-serif;
+  line-height: 1.7;
+  letter-spacing: 1px;
+  font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック";
+  font-weight: bold;
+}
+
+/* line 15, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 21, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+/* line 25, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+a {
+  text-decoration: none;
+  color: #2d3133;
+  font-size: 14px;
+}
+
+/* top ================================ */
+/* line 31, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+.head {
+  font-size: 20px;
+  border-bottom: solid 3px #87CEFA;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* line 37, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+.top-wrapper {
+  height: 300px;
+  background-image: url("assets/background-ee31fc06712fe26417545b398464bbc2b0029df0228c966f6b5f132bb715d433.jpg");
+  background-size: cover;
+  text-align: center;
+}
+/* line 42, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+.top-wrapper h1 {
+  position: relative;
+  top: 50%;
+  color: white;
+  font-size: 60px;
+}
+
+/* about ================================ */
+/* line 51, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+.about .about-content {
+  padding-bottom: 50px;
+}
+/* line 54, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+.about .about-top {
+  text-align: center;
+}
+/* line 56, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+.about .about-top h2 {
+  font-size: 50px;
+}
+/* line 59, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+.about .about-top .about-img {
+  text-align: center;
+}
+/* line 61, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+.about .about-top .about-img img {
+  height: 200px;
+}
+/* line 64, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+.about .history {
+  text-align: center;
+}
+/* line 66, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+.about .history p {
+  font-size: 10px;
+}
+/* line 70, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+.about .members {
+  text-align: center;
+}
+/* line 72, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+.about .members .member {
+  margin-bottom: 30px;
+}
+/* line 75, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+.about .members .name {
+  font-size: 30px;
+}
+/* line 78, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+.about .members .member-photo {
+  height: 200px;
+}
+/* line 81, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+.about .members p {
+  font-size: 10px;
+}
+
+/* line 86, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+.home-back {
+  font-size: 20px;
+}
+
+/* works ================================ */
+/* line 93, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+.works .works-contents .works-content {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  border: solid 1px black;
+  border-color: black;
+  margin: 20px;
+}
+/* line 100, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+.works .works-contents .works-content a {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* line 108, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+.works .works-contents .works-content img {
+  height: 200px;
+  width: auto;
+}
+/* line 112, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+.works .works-contents .works-content h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
