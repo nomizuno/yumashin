@@ -31,6 +31,7 @@ a{
 	font-size: 20px;
 	border-bottom: solid 3px #87CEFA;
 	text-align: center;
+	margin-bottom: 20px;
 }
 .top-wrapper{
 	height: 300px;
@@ -40,11 +41,48 @@ a{
 	h1{
 		position: relative;
 		top: 50%;
-		color:aqua;
+		color:white;
 		font-size:60px;
 	}
 }
-
+/* about ================================ */
 .about{
-
+	.about-content{
+		padding-bottom:50px;
+	}
+	.about-top{
+		text-align: center;
+		h2{
+			font-size:50px;
+		}
+	    .about-img{
+		    text-align: center;
+		    img{height: 200px;}
+		}
+	}
+	.history{
+		text-align: center;
+		p{
+			font-size:10px;
+		}
+	}
+	.members{
+		text-align: center;
+		.member{
+			margin-bottom:30px;
+		}
+		.name{
+			font-size:30px;
+		}
+		.member-photo{
+			height:200px;
+		}
+		p{
+			font-size:10px;
+		}
+	}
 }
+.home-back{
+	font-size: 20px;
+}
+
