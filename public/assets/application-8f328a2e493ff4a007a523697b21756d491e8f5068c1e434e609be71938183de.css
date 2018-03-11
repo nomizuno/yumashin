@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/* モバイルファースト（全環境に共通のデザイン） ================================ */
+/* reset ================================ */
+/* line 4, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 8, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+html {
+  font: 100%/1.5 'Avenir Next', 'Hiragino Sans', sans-serif;
+  line-height: 1.7;
+  letter-spacing: 1px;
+  font-family: "Tsukushi A Round Gothic","筑紫A丸ゴシック";
+  font-weight: bold;
+}
+
+/* line 15, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 21, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+/* line 25, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+a {
+  text-decoration: none;
+  color: #2d3133;
+  font-size: 14px;
+}
+
+/* top ================================ */
+/* line 31, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+.head {
+  font-size: 20px;
+  border-bottom: solid 3px #87CEFA;
+  text-align: center;
+}
+
+/* line 36, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+.top-wrapper {
+  height: 300px;
+  background-image: url(/assets/background.jpg);
+  background-size: cover;
+  text-align: center;
+}
+/* line 41, /Users/mizunoyuuma/works/yumashin/app/assets/stylesheets/home.scss */
+.top-wrapper h1 {
+  position: relative;
+  top: 50%;
+  color: aqua;
+  font-size: 60px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
