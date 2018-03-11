@@ -27,6 +27,24 @@ a{
     color: #2d3133;
     font-size: 14px;
 }
+.main{
+	margin-top:60px;
+}
+
+
+/* header ================================ */
+.header-logo{
+  position: absolute;
+  top:0;
+  left:30px;
+  position: fixed;
+  
+}
+.header-menus li{
+  float:left;
+  line-height:64px;
+  padding-left:15px;
+}
 /* top ================================ */
 .head{
 	font-size: 20px;
@@ -46,15 +64,6 @@ a{
 		color:white;
 		font-size:60px;
 	}
-}
-
-
-.header-menus li{
-  float:left;
-  line-height:64px;
-  font-size:13px;
-
-  padding-left:15px;
 }
 
 /* about ================================ */
@@ -100,6 +109,7 @@ a{
 
 /* works ================================ */
 .works{
+	margin-top:60px;
 	.works-contents{
 		.works-content{
 			position: relative;
