@@ -27,8 +27,15 @@ a{
     color: #2d3133;
     font-size: 14px;
 }
+body{
+	margin: 0;
+
 .main{
-	margin-top:60px;
+	margin-top:40px;
+	width:100%;
+	background-color:rgba(65,216,242,0.1);
+	z-index: 0;
+}
 }
 
 
@@ -36,40 +43,128 @@ a{
 .header-logo{
   position: absolute;
   top:0;
-  left:30px;
+  left:0px;
   position: fixed;
+  background: rgba(35,20,180,0.5);
+  width:100%;
+  height: 40px;
+  z-index: 1;
   
 }
 .header-menus li{
-  float:left;
-  line-height:64px;
-  padding-left:15px;
+	float:left;
+	.header-link{
+		font-size:20px;
+		color: white;
+		display: block;
+		 padding:0 30px 0 30px;
+		 line-height:40px;
+		&:active{
+			color:red;
+		}
+	}
+	&:hover{
+		background: rgba(35,20,180,0.7);
+		
+		
+	}
 }
 /* top ================================ */
 .head{
-	font-size: 20px;
+	font-size: 25px;
 	border-bottom: solid 3px #87CEFA;
 	text-align: center;
-	margin-bottom: 20px;
-
+    width:80%;
+	margin:0 auto;
+	max-width:600px;
+	margin-top:10px;
+	margin-bottom:20px;
 }
 .top-wrapper{
-	height: 300px;
-	background-image:image-url("background.jpg");
-	background-size:cover;
-	text-align: center;
-	h1{
-		position: relative;
-		top: 50%;
-		color:white;
-		font-size:60px;
+	img{
+	height:auto;
+	width:58%;
+	position:absolute;
+	top:40;
+	left:21%;
 	}
+	.box{
+		height:0;
+		padding-bottom: 47.5%;
+		background-color: black;
+	}
+}
+.obj1{
+	animation: slide1 2s ease 1s 1 normal backwards running;
+    }
+@keyframes slide1{
+  0% {
+    position: absolute;
+	top:40;
+	left:0%;
+	opacity:0;
+  }
+  100% {
+    position: absolute;
+	top:40;
+	left:21%;
+	opacity:1;
+  }
+}
+.obj2{
+	animation: slide2 2s ease 2s 1 normal backwards running;
+    }
+@keyframes slide2{
+  0% {
+    position: absolute;
+	top:40;
+	left:79%;
+	opacity:0;
+  }
+  100% {
+    position: absolute;
+	top:40;
+	left:21%;
+	opacity:1;
+  }
+}
+.top-main{
+	text-align: center;
+	.content{
+		width:80%;
+		margin:0 auto;
+		max-width:600px;
+		text-align: left;
+			}
+	.top-about{
+			text-align: center;
+			.top-about-word{
+				font-size: 30px;
+		    }
+		    .andmore{
+			text-align: left;
+		    }
+	}
+}
+
+.link{
+	padding:5px;
+	font-size: 20px;
+	color: rgba(39,203,221,1.00);
+		&:hover{
+			color: rgba(27,93,178,1);
+			}
 }
 
 /* about ================================ */
 .about{
+	text-align: center;
 	.about-content{
 		padding-bottom:50px;
+		width:80%;
+		margin:0 auto;
+		max-width:600px;
+		text-align: left;
 	}
 	.about-top{
 		text-align: center;
@@ -82,9 +177,9 @@ a{
 		}
 	}
 	.history{
-		text-align: center;
+		text-align: left;
 		p{
-			font-size:10px;
+			font-size:15px;
 		}
 	}
 	.members{
@@ -99,25 +194,29 @@ a{
 			height:200px;
 		}
 		p{
-			font-size:10px;
+			font-size:15px;
 		}
 	}
 }
-.home-back{
+.instagram{
+	color:rgba(229,18,139,0.89);
 	font-size: 20px;
 }
 
 /* works ================================ */
 .works{
-	margin-top:60px;
+	width:100%;
+	text-align: center;
 	.works-contents{
+		height: auto;
+		width:100%;
 		.works-content{
 			position: relative;
 			text-align: center;
 			padding:20px;
 			border: solid 1px black;
 			border-color: black;
-			margin:20px;
+			margin:20px 2% 20px 2%;
 			a{
 				display: block;
 				position:absolute;
@@ -134,6 +233,32 @@ a{
 				font-size:30px;
 				margin-bottom:10px;
 			}
+			&:hover{
+				background:rgba(39,203,221,0.1);
+			}
+		}
+		.clear{
+			clear:both;
 		}
 	}
 }
+.top-back a{
+	    display: block;
+}
+
+/* ▼タブレット用デザインとして付け足すデザイン ================================ */
+@media all and (min-width:768px){
+	.works-contents{
+		.works-content{
+			width:46%;
+			float:left;
+			
+		}
+	}
+}
+
+/* ▼PC用デザインとして付け足すデザイン ================================ */
+@media all and (min-width:920px){
+	
+}
+
