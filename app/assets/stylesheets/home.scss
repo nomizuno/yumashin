@@ -29,10 +29,13 @@ a{
 }
 body{
 	margin: 0;
-}
+
 .main{
 	margin-top:40px;
 	width:100%;
+	background-color:rgba(65,216,242,0.1);
+	z-index: 0;
+}
 }
 
 
@@ -71,21 +74,25 @@ body{
 	font-size: 25px;
 	border-bottom: solid 3px #87CEFA;
 	text-align: center;
-	margin:10px 0 20px 0;
-	width:100%;
-	margin: 0 auto;
+    width:80%;
+	margin:0 auto;
+	max-width:600px;
+	margin-top:10px;
+	margin-bottom:20px;
 }
 .top-wrapper{
-	height: 300px;
-	background-image:image-url("background.jpg");
-	background-size:cover;
+	height:0px;
+	background-image:image-url("yumashin_top.png");
+	background-size:100% auto;
+	background-repeat:no-repeat;
+	background-position: center;
 	text-align: center;
 	margin-bottom: 30px;
+	padding-top:28%;
+	padding-bottom:28%;
 	h1{
-		position: relative;
-		top: 50%;
-		color:white;
-		font-size:60px;
+		color:black;
+		font-size:100px;
 	}
 }
 .top-main{
@@ -108,7 +115,6 @@ body{
 }
 
 .link{
-	display: block;
 	padding:5px;
 	font-size: 20px;
 	color: rgba(39,203,221,1.00);
@@ -166,7 +172,6 @@ body{
 
 /* works ================================ */
 .works{
-	margin-top:60px;
 	width:100%;
 	text-align: center;
 	.works-contents{
