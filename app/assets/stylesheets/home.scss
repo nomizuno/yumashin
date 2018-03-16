@@ -18,7 +18,7 @@ ul, li {
   
 }
 
-h1, h2, h3, h4, h5, h6, p{
+h1, h2, h3, h4, h5, h6, p, div{
 	margin: 0;
 }
 
@@ -34,7 +34,6 @@ body{
 	padding-top:40px;
 	padding-bottom:60px;
 	width:100%;
-	background-color:rgba(65,216,242,0.1);
 	z-index: 0;
 }
 }
@@ -81,6 +80,9 @@ body{
 	max-width:600px;
 	margin-top:10px;
 	margin-bottom:20px;
+}
+.PC-head{
+	display: none;
 }
 .top-wrapper{
 	img{
@@ -132,7 +134,6 @@ body{
   }
 }
 .top-main{
-	text-align: center;
 	.content{
 		width:80%;
 		margin:0 auto;
@@ -290,6 +291,70 @@ body{
 
 /* ▼PC用デザインとして付け足すデザイン ================================ */
 @media all and (min-width:920px){
-
+body{
+	.main{
+		padding-bottom: 0;
+	}
+}
+	.head{
+		display: none;
+	}
+	.PC-head{
+		display:inline-block;
+		font-size:100px;
+		width:40%;
+		text-align: center;
+		line-height: 100px;
+		vertical-align: bottom;
+		padding-bottom:30px;
+		p{
+			font-size:50px;
+		}
+	}
+	/*hoverアクション用*/
+	.PC-head{
+		position: relative;
+		&:hover{
+			cursor:pointer;
+		}
+	}
+	.PC-head:hover .ring{
+		    background:rgba(181,244,253,0.8);
+			position:absolute;
+			z-index:-1;
+			border-radius: 100px;
+			height: 70px;
+			width: 70px;
+			top:0px;
+			left:200px;
+			animation:pulsate 1s ease-out;
+			animation-iteration-count: infinite;
+	}
+	@keyframes pulsate {
+0%   { transform: scale(1, 1); }
+50%  { opacity: 1; }
+100% { transform: scale(4, 4); opacity: 0.0; }
+}
+	.top-main{
+		width: 100%;
+		.content{
+			width:100%;
+			max-width:2000px;
+			height:400px;
+			.PC-content{
+				width:59.4%;
+				display:inline-block;
+				color: white;
+				background-color: black;
+				min-height: 400px;
+				padding:40px 30px 30px 30px;
+			}
+		}
+		.top-about{
+		}
+		.link{
+			text-align: center;
+		}
+	}
 }
 

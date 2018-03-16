@@ -14,6 +14,13 @@
 //= require turbolinks
 //= require_tree .
 $(function(){
-
+		var content = $('.PC-content');
+		var fadeSpeed = 2000;
+		content.css({opacity:'0'});
+		$('.content').on({
+			'click':function(){
+			$(this).find(content).animate({opacity:'1'},fadeSpeed);
+		}
+	});
 });
 
