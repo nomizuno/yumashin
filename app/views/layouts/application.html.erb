@@ -30,6 +30,27 @@
 		</li>
 	</ul>
     </div>
+	
+	<footer>
+		<ul class="footer-menus">
+		<li>
+		<%= link_to("Top","/",class:"footer-link")  %>
+		</li>
+		<li>|</li>
+		<li>
+		<%= link_to("About","about",class:"footer-link") %>
+		</li>
+		<li>|</li>
+		<li>
+		<%= link_to("Works","works",class:"footer-link") %>
+		</li>
+		<li>|</li>
+		<li>
+		<%= link_to("Contact","https://thebase.in/inquiry/yumashin",class:"footer-link",:target=>["_blank"]) %>
+		</li>
+	</ul>
+		<p class="copy-right">Copyright(c)2018 yumashin.com All Rights Reseaved</p>
+	</footer>
 	<%= yield %>
 
 </body>
