@@ -29,6 +29,8 @@ a{
 }
 body{
 	margin: 0;
+	position: relative;
+	padding-bottom: 100px;
 
 .main{
 	padding-top:40px;
@@ -61,7 +63,7 @@ body{
 		padding:0 30px 0 30px;
 		line-height:40px;
 		&:active{
-			color:red;
+			color:mediumaquamarine;
 		}
 	}
 	&:hover{
@@ -69,6 +71,60 @@ body{
 		
 		
 	}
+}
+/* footer ================================ */
+footer{
+	height: 100px;
+	width: 100%;
+	background-color: black;
+	position: absolute;
+	bottom: 0px;
+	color: white;
+	padding:20px;
+	.footer-menus li{
+	float:left;
+	transition:1.0s;
+	font-size:15px;
+	line-height:35px;
+	.footer-link{
+		color: white;
+		display: block;
+		padding:0 10px 0 10px;
+		&:hover{
+			color:mediumaquamarine;
+		}
+	}
+	}
+	.copy-right{
+	position: absolute;
+	right: 30px;
+	bottom: 20px;
+	font-size:10px;
+	}
+}
+/* loading ================================ */
+#loader-bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #000;
+  z-index: 1;
+}
+#loader {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
 }
 /* top ================================ */
 .head{
@@ -92,46 +148,42 @@ body{
 	top:40;
 	left:21%;
 	}
+	.obj1{
+	position:absolute;
+	left:21%;
+	opacity: 1;
+    }
+	.obj1.change{
+	position:absolute;
+	left:0%;
+	opacity: 0;
+    }
+	.obj2{
+	position:absolute;
+	left:21%;
+	opacity: 1;
+	}
+	.obj2.change{
+	position:absolute;
+	left:42%;
+	opacity: 0;
+	}
 	.box{
 		height:0;
 		padding-bottom: 47.5%;
 		background-color: black;
 	}
-}
-.obj1{
-	animation: slide1 2s ease 0.5s 1 normal backwards running;
-	transform: translate3d(0,0,0);
-    }
-@keyframes slide1{
-  0% {
-    position: absolute;
-	top:40;
-	left:0%;
-	opacity:0;
-  }
-  100% {
-    position: absolute;
-	top:40;
-	left:21%;
-	opacity:1;
-  }
-}
-.obj2{
-	animation: slide2 2s ease 2.5s 1 normal backwards running;
-    }
-@keyframes slide2{
-  0% {
-    position: absolute;
-	top:40;
-	left:79%;
-	opacity:0;
-  }
-  100% {
-    position: absolute;
-	top:40;
-	left:21%;
-	opacity:1;
-  }
+	.under-arrow{
+		background-color:rgba(0,0,0,0.8);
+		color: white;
+		text-align: center;
+		width: 100%;
+		height: 60px;
+		padding-top:10px;
+		i{
+			font-size:40px;
+		}
+	}
 }
 .top-main{
 	.content{
@@ -314,11 +366,8 @@ body{
 	/*hoverアクション用*/
 	.PC-head{
 		position: relative;
-		&:hover{
-			cursor:pointer;
-		}
 	}
-	.PC-head:hover .ring{
+	.content:hover .ring{
 		    background:rgba(181,244,253,0.8);
 			position:absolute;
 			z-index:-1;
@@ -348,6 +397,11 @@ body{
 				background-color: black;
 				min-height: 400px;
 				padding:40px 30px 30px 30px;
+				transition: 3s opacity ease 0s;
+			    opacity:0;
+			}
+			.PC-content.change{
+				opacity:1;
 			}
 		}
 		.top-about{
@@ -357,4 +411,3 @@ body{
 		}
 	}
 }
-
