@@ -33,7 +33,6 @@ body{
 	padding-bottom: 100px;
 
 .main{
-	padding-top:40px;
 	padding-bottom:60px;
 	width:100%;
 	z-index: 0;
@@ -42,36 +41,46 @@ body{
 
 
 /* header ================================ */
-.header-logo{
+.header{
   position: absolute;
   top:0;
   left:0px;
   position: fixed;
-  background: rgba(35,20,180,0.5);
+  background:rgba(34,195,80,0.5);
   width:100%;
   height: 40px;
-  z-index: 1;
-  
+  z-index: 10;
+}
+.header-logo{
+		height:40px;
+	    padding:0 10px 0 10px;
 }
 .header-menus li{
 	float:left;
-	transition:1.0s;
+	transition:0.7s;
 	.header-link{
 		font-size:20px;
 		color: white;
 		display: block;
 		padding:0 30px 0 30px;
 		line-height:40px;
+		transition:0.7s;
 		&:active{
-			color:mediumaquamarine;
+			color:rgba(34,195,80,1);
 		}
+		&:hover{
+			color:black;
+		}
+		&:hover{
+		background:rgba(34,195,80,1);
+		color:black;
 	}
-	&:hover{
-		background: rgba(35,20,180,0.7);
-		
-		
 	}
 }
+.top-box{
+		height:40px;
+		background-color:rgba(0,0,0,0.90);
+	}
 /* footer ================================ */
 footer{
 	height: 100px;
@@ -90,8 +99,9 @@ footer{
 		color: white;
 		display: block;
 		padding:0 10px 0 10px;
+		transition: 0.7s;
 		&:hover{
-			color:mediumaquamarine;
+			color:rgba(34,195,80,1);
 		}
 	}
 	}
@@ -125,6 +135,19 @@ footer{
   text-align: center;
   color: #fff;
   z-index: 2;
+}
+.opening{
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: 20;
+	background-color:white;
+	text-align: center;
+	height:100vh;
+	width:100%;
+	display:none;
+	img{width: 80vw;
+	}
 }
 /* top ================================ */
 .head{
@@ -174,8 +197,8 @@ footer{
 		background-color: black;
 	}
 	.under-arrow{
-		background-color:rgba(0,0,0,0.8);
-		color: white;
+		background-color:rgba(0,0,0,0.9);
+		color:white;
 		text-align: center;
 		width: 100%;
 		height: 60px;
@@ -206,10 +229,10 @@ footer{
 .link{
 	padding:5px;
 	font-size: 20px;
-	color:rgba(39,203,221,1.00);
-	transition: 1.0s;
+	color:rgba(34,195,80,1);
+	transition: 0.7s;
 		&:hover{
-			color:rgba(18,58,211,0.90);
+			color:rgba(177,195,34,1.00);
 			}
 }
 
@@ -295,8 +318,8 @@ footer{
 			border-color: black;
 			border-radius: 30px;
 			margin:20px 2% 20px 2%;
-			transition: 1s;
-			background-color:rgba(59,192,241,0.2);
+			transition: 0.5s;
+			background-color:rgba(34,195,80,0.2);
 			a{
 				display: block;
 				position:absolute;
@@ -318,7 +341,7 @@ footer{
 				margin-bottom:10px;
 			}
 			&:hover{
-				background:rgba(39,203,221,0.3);
+				background:rgba(34,195,80,0.5);
 			}
 		}
 		.clear{
@@ -336,7 +359,6 @@ footer{
 		.works-content{
 			width:46%;
 			float:left;
-			
 		}
 	}
 }
@@ -349,65 +371,60 @@ body{
 	}
 }
 	.head{
-		display: none;
+		display:none;
 	}
-	.PC-head{
-		display:inline-block;
-		font-size:100px;
-		width:40%;
-		text-align: center;
-		line-height: 100px;
-		vertical-align: bottom;
-		padding-bottom:30px;
-		p{
-			font-size:50px;
-		}
-	}
-	/*hoverアクション用*/
-	.PC-head{
-		position: relative;
-	}
-	.content:hover .ring{
-		    background:rgba(181,244,253,0.8);
-			position:absolute;
-			z-index:-1;
-			border-radius: 100px;
-			height: 70px;
-			width: 70px;
-			top:0px;
-			left:200px;
-			animation:pulsate 1s ease-out;
-			animation-iteration-count: infinite;
-	}
-	@keyframes pulsate {
-0%   { transform: scale(1, 1); }
-50%  { opacity: 1; }
-100% { transform: scale(4, 4); opacity: 0.0; }
-}
 	.top-main{
-		width: 100%;
-		.content{
-			width:100%;
-			max-width:2000px;
-			height:400px;
-			.PC-content{
-				width:59.4%;
-				display:inline-block;
-				color: white;
-				background-color: black;
-				min-height: 400px;
-				padding:40px 30px 30px 30px;
-				transition: 3s opacity ease 0s;
-			    opacity:0;
-			}
-			.PC-content.change{
-				opacity:1;
-			}
+		width:100%;
+		.PC-head{
+	display:inline-block;
+	font-size:100px;
+	width:40%;
+	text-align:center;
+	line-height:100px;
+	vertical-align:bottom;
+	padding-bottom:30px;
+	p{font-size:50px;}
 		}
-		.top-about{
+/*hoverアクション用*/
+.PC-head{position: relative;}
+  .content:hover .ring{
+  background:rgba(34,195,80,0.5);
+  position:absolute;
+  z-index:-1;
+  border-radius: 100px;
+  height: 70px;
+  width: 70px;
+  top:0px;
+  left:200px;
+  animation:pulsate 1s ease-out;
+  animation-iteration-count:infinite;
+  }
+    @keyframes pulsate {
+    0%   { transform: scale(1, 1); }
+	50%  { opacity: 1; }
+    100% { transform: scale(4, 4); opacity: 0.0; }
+	}
+    .content{
+		width:100%;
+    max-width:2000px;
+    height:400px;
+            .PC-content{
+            width:59.4%;
+			display:inline-block;
+			color: white;
+			background-color:black;
+			min-height:400px;
+			padding:40px 30px 30px 30px;
+			transition: 3s opacity ease 0s;
+		    opacity:0;
 		}
-		.link{
-			text-align: center;
+		.PC-content.change{
+			opacity:1;
 		}
 	}
+	.top-about{
+	}
+	.link{
+	}
+}
 }
