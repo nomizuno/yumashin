@@ -17,32 +17,41 @@
 $(function() {
   var h = $(window).height();
  
-  $('.main').css('display','none');
+  $('.main,.header,footer').css('display','none');
   $('#loader-bg ,#loader').height(h).css('display','block');
 });
  
 $(window).on("load",function () { //全ての読み込みが完了したら実行
   $('#loader-bg').delay(900).fadeOut(800);
   $('#loader').delay(600).fadeOut(300);
-  $('.main').css('display', 'block');
   $('.obj1').addClass('change');
   $('.obj2').addClass('change');
   $('.under-arrow').hide();
   //top-imgのアニメーション:ロード１秒後
+
+setTimeout(function(){
+	$('.opening').fadeIn(2000)
+},1000);
+setTimeout(function(){
+	$('.opening').fadeOut(2000)
+},3500);
+setTimeout(function(){
+	$('.main,.header,footer').fadeIn(2000)
+},5500);
 setTimeout(function(){
 	$('.obj1').animate({left:"+=21%",opacity:1},2000,"swing"
 		,function(){
 			$('.obj2').animate({left:"-=21%",opacity:1},2000,"swing")
 		}
-);},1500);
+);},7500);
 setTimeout(function(){
 			$('.under-arrow').slideDown("slow")
-},5500);
+},11500);
 	});
  
 //10秒たったら強制的にロード画面を非表示
 $(function(){
-  setTimeout('stopload()',3000);
+  setTimeout('stopload()',10000);
 });
  
 function stopload(){
@@ -59,13 +68,19 @@ $(function(){
 	    $(window).scroll(function(){
 			$('.content').each(function(){
 				var obj_t_pos = $(this).offset().top;
-		        var scroll = $(window).scrollTop();
 		        var windowHeight = $(window).height();
+		        var scroll = $(window).scrollTop();
 			if(scroll > obj_t_pos - windowHeight + 300){
 				$(this).find('.PC-content').addClass('change');
             }else{
 				$(this).find('.PC-content').removeClass('change');
 			}
 			});
+			var scroll = $(window).scrollTop();
+			if(scroll > 400){
+				$('.header').addClass('change');
+			}else{
+				$('.header').removeClass('change');
+			}
 		});
 });
