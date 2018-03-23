@@ -152,7 +152,7 @@ footer{
 /* top ================================ */
 .head{
 	font-size: 25px;
-	border-bottom: solid 3px #87CEFA;
+	border-bottom: solid 3px rgba(34,195,80,0.7);
 	text-align: center;
     width:80%;
 	margin:0 auto;
@@ -209,20 +209,49 @@ footer{
 	}
 }
 .top-main{
+	.top-contents{
+		padding-top:20px;
+		margin-top:30px;
+		border-top:double 5px black;
+	}
 	.content{
 		width:80%;
 		margin:0 auto;
 		max-width:600px;
-		text-align: left;
+		text-align:left;
 			}
 	.top-about{
-			text-align: center;
+			text-align:center;
 			.top-about-word{
 				font-size: 30px;
 		    }
 		    .andmore{
 			text-align: left;
 		    }
+	}
+	.top-blog{
+		#instafeed{overflow: hidden;
+			ul{
+			}
+			li{
+				float:left;
+				padding:5px;
+				width:150px;
+				transition: 0.7s;
+				text-align: center;
+				img{
+					height:130px;
+				}
+				p{
+				font-size:5px;
+				opacity:0;
+				transition:0.5s;
+				color:rgba(34,195,80,1);
+				}
+				&:hover p{opacity:1;}
+				&:hover {border:solid 1px rgba(34,195,80,1);}
+			}
+		}
 	}
 }
 
@@ -367,7 +396,7 @@ footer{
 @media all and (min-width:920px){
 body{
 	.main{
-		padding-bottom: 0;
+		padding-bottom:0;
 	}
 }
 	.head{
@@ -405,10 +434,10 @@ body{
     100% { transform: scale(4, 4); opacity: 0.0; }
 	}
     .content{
-		width:100%;
+	width:100%;
     max-width:2000px;
     height:400px;
-            .PC-content{
+      .PC-content{
             width:59.4%;
 			display:inline-block;
 			color: white;
@@ -418,8 +447,8 @@ body{
 			transition: 3s opacity ease 0s;
 		    opacity:0;
 		}
-		.PC-content.change{
-			opacity:1;
+	   .PC-content.change{
+		   opacity:1;
 		}
 	}
 	.top-about{
@@ -427,4 +456,32 @@ body{
 	.link{
 	}
 }
+    .about{
+		.PC-header{
+			background-color: black;
+			line-height: 40px;
+			text-align: left;
+		  .PC-head{
+			display:inline-block;
+			color:white;
+			font-size:30px;
+			padding-left:20px;
+		  }
+		}
+	}
+	.works{
+		.PC-header{
+			background-color: black;
+			line-height: 40px;
+			text-align: left;
+			margin-top:20px;
+		  .PC-head{
+			display:inline-block;
+			color:white;
+			font-size:30px;
+			padding-left:20px;
+		  }
+		}
+		
+	}
 }
