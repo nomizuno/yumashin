@@ -14,15 +14,15 @@
 //= require turbolinks
 //= require_tree .
 $(function(){
-var feed = new Instafeed({
+　　var feed = new Instafeed({
     clientId: 'e09718a390c64d60b700c0cf9a802fb6',
-    get: 'user', 
-    userId: '7348609845',
+    get:'user', 
+    userId:'7348609845',
     accessToken:'7348609845.e09718a.0ba3a15c79c8487dbd0b27d399b925f2',
     links: true,
-    limit: 3, // 取得件数 
+    limit: 4, // 取得件数 
     resolution:'thumbnail', // thumbnail (default) - 150x150 | low_resolution - 306x306 | standard_resolution - 612x612
-    template: ' <ul><li class="col-lg-1"><a href="{{link}}" target="_blank"><img src="{{image}}" /></a><p>{{caption}}</p></li></ul>' // 画像URL：{{image}} リンク：{{link}} キャプションテキスト{{caption}} いいね数：{{likes}} コメント数：{{comments}}
+    template: ' <ul><li class="col-lg-1"><a href="{{link}}" target="_blank"><img src="{{image}}"></a><p>{{caption}}</p></li></ul>' // 画像URL：{{image}} リンク：{{link}} キャプションテキスト{{caption}} いいね数：{{likes}} コメント数：{{comments}}
 });
 feed.run();
 });
@@ -30,7 +30,7 @@ feed.run();
 $(function() {
   var h = $(window).height();
 
-  $('.main,.header,footer').css('display','none');
+  $('.main,.header,footer').hide();
   $('#loader-bg ,#loader').height(h).css('display','block');
 });
  
