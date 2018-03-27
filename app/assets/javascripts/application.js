@@ -14,7 +14,7 @@
 //= require turbolinks
 //= require_tree .
 $(function(){
----
+	
 　　var feed = new Instafeed({
     clientId: 'e09718a390c64d60b700c0cf9a802fb6',
     get:'user', 
