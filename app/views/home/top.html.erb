@@ -21,7 +21,7 @@
 
         <h2 class = "head">What's "ユウマシン" ?</h2>
 		<div class = "top-about content" >
-			<h2 class="PC-head">What's <p>"ユウマシン</p><span class="ring"></span></h2>
+			<h2 class="PC-head">What's <p>"ユウマシン" ?</p><span class="ring"></span></h2>
 			<div class="PC-content">
 			<h2 class="top-about-word">ニヒリズムを超えてゆけ。</h2>
 			<h2 class="top-about-word">平成最後のクリエイティブユニット</h2>
@@ -37,13 +37,14 @@
 		</div>
 
 		<h2 class = "head">News</h2>
-		<div class = "top-gallery content">
+		<div class = "top-news content">
 			<div class="PC-content">
 			<p style ="color:orange;">New</p>
-			<p>2018.3.11  開発合宿</p>
-			<p>2018.3.19  Shop:新商品入荷『SATORI WANKO Tシャツ』</p>
+			<p>2018.3.28  Works:『ことぶつえん』プレオープン</p>
+			<p>2018.3.25  Works→Shop:新商品入荷『ユウマシン Tシャツ』</p>
 			<p>2018.3.20  ユウマシン新ロゴ完成</p>
-			<p>2018.3.25  Shop:新商品入荷『ユウマシン Tシャツ』</p>
+			<p>2018.3.19  Works→Shop:新商品入荷『SATORI WANKO Tシャツ』</p>
+			<p>2018.3.11  開発合宿</p>
 			<a href="works" class="link"><i class="fas fa-arrow-alt-circle-left"></i>Works</a>
 		    </div>
 			<h2 class="PC-head">News<span class="ring"></span></h2>
@@ -53,13 +54,27 @@
 		<div class = "top-blog content">
 			<h2 class="PC-head">Blog<span class="ring"></span></h2>
 			<div class="PC-content">
-
-<script type="text/javascript">
-</script>
-			<div id="instafeed">
-			</div>
+			 <div id="instafeed">
+			 </div>
+			 <a href="https://www.instagram.com/yumashin.official/" class="link" target="_blank"><i class="fas fa-arrow-alt-circle-left"></i>And more</a>
 		    </div>
 		</div>
+
+<script type="text/javascript">
+	$(function(){
+　　var feed = new Instafeed({
+    clientId: 'e09718a390c64d60b700c0cf9a802fb6',
+    get:'user', 
+    userId:'7348609845',
+    accessToken:'7348609845.e09718a.0ba3a15c79c8487dbd0b27d399b925f2',
+    links: true,
+    limit: 4, // 取得件数 
+    resolution:'thumbnail', // thumbnail (default) - 150x150 | low_resolution - 306x306 | standard_resolution - 612x612
+    template: ' <ul><li class="col-lg-1"><a href="{{link}}" target="_blank"><img src="{{image}}"></a><p>{{caption}}</p></li></ul>' // 画像URL：{{image}} リンク：{{link}} キャプションテキスト{{caption}} いいね数：{{likes}} コメント数：{{comments}}
+});
+feed.run();
+});
+</script>
 
 		<h2 class = "head">Contact</h2>
 		<div class = "top-contact content">
