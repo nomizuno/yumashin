@@ -41,22 +41,27 @@ body{
 
 
 /* header ================================ */
-.header{
-  position: absolute;
+header{
   top:0;
   left:0px;
+  position:relative;
   position: fixed;
   background:rgba(34,195,80,0.5);
   width:100%;
   height: 40px;
   z-index: 10;
-}
 .header-logo{
 		height:40px;
 	    padding:0 10px 0 10px;
 }
+.g-nav{
+  display: none;
+  position: absolute;
+  top: 40px;
+  right:0px;
+  background-color:rgba(0,0,0,0.6);
+}
 .header-menus li{
-	float:left;
 	transition:0.7s;
 	.header-link{
 		font-size:20px;
@@ -76,6 +81,60 @@ body{
 		color:black;
 	}
 	}
+}
+.sp-menu{
+    display: block;
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    .menu-trigger,
+    .menu-trigger span {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+    }
+    .menu-trigger{
+        position: relative;
+        width: 44px;
+        height: 33px;
+        span{
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 70%;
+            height: 2px;
+            background-color: #fff;
+            border-radius: 5px;
+            &:nth-of-type(1){
+                top: 5px;
+            }
+            &:nth-of-type(2){
+                top: 15px;
+            }
+            &:nth-of-type(3){
+                top: 25px;
+            }
+        }
+                // activeというクラスをつける
+        &.active{
+                // クリックした際のcssアニメーション
+            span{
+                &:nth-of-type(1){
+                    -webkit-transform: translateY(10px) rotate(-45deg);
+                    transform: translateY(10px) rotate(-45deg);
+                }
+                &:nth-of-type(2){
+                    opacity: 0;
+                }
+                &:nth-of-type(3){
+                    -webkit-transform:  translateY(-10px) rotate(45deg);
+                        transform: translateY(-10px) rotate(45deg);
+                }
+            }
+        }
+    }
+}
 }
 .top-box{
 		height:40px;
@@ -222,34 +281,37 @@ footer{
 			}
 	.top-about{
 			text-align:center;
-			.top-about-word{
-				font-size: 30px;
-		    }
+			.top-about-word{font-size: 17px;}
+			p{font-size:10px;}
 		    .andmore{
 			text-align: left;
 		    }
 	}
+	.top-news{
+		p{font-size:10px;}
+	}
 	.top-blog{
 		#instafeed{overflow: hidden;
-			ul{
+			ul:nth-child(n+3){
+				display:none;
 			}
 			li{
 				float:left;
 				padding:5px;
-				width:150px;
+				width:130px;
 				transition: 0.7s;
 				text-align: center;
+				border:solid 1px rgba(34,195,80,1);
+				margin-right:10px;
 				img{
-					height:130px;
+					height:110px;
 				}
 				p{
 				font-size:5px;
-				opacity:0;
+				opacity:1;
 				transition:0.5s;
 				color:rgba(34,195,80,1);
 				}
-				&:hover p{opacity:1;}
-				&:hover {border:solid 1px rgba(34,195,80,1);}
 			}
 		}
 	}
@@ -384,28 +446,71 @@ footer{
 }
 
 /* ▼タブレット用デザインとして付け足すデザイン ================================ */
-@media all and (min-width:768px){
-	.works-contents{
-		.works-content{
-			width:46%;
-			float:left;
-		}
-	}
-}
-
-/* ▼PC用デザインとして付け足すデザイン ================================ */
 @media all and (min-width:920px){
 body{
 	.main{
 		padding-bottom:0;
 	}
 }
+/* header ================================ */
+header{
+.g-nav{
+  display: block;
+  position: absolute;
+  top:0;
+  right:0;
+  background-color:rgba(0,0,0,0);
+}
+.header-menus li{
+   float:left;
+	}
+  .header-link{
+	color:white;
+	font-size:15px;
+	line-height: 46px;
+	padding:0px 10px;
+  }
+.sp-menu{
+    display: none;
+    }
+}
+
 	.head{
 		display:none;
 	}
 	.top-main{
 		width:100%;
-		.PC-head{
+		.top-blog{
+		#instafeed{
+			ul:nth-child(-n+4){
+				display:block;
+			}
+			ul:nth-child(n+5){
+				display:none;
+			}
+			li{
+				float:left;
+				padding:5px;
+				width:150px;
+				transition: 0.7s;
+				text-align: center;
+				border:none;
+				margin-right:0px;
+				img{
+					height:130px;
+				}
+				p{
+				font-size:5px;
+				opacity:0;
+				transition:0.5s;
+				color:rgba(34,195,80,1);
+				}
+				&:hover p{opacity:1;}
+				&:hover {border:solid 1px rgba(34,195,80,1);}
+			}
+		}
+	}
+	.PC-head{
 	display:inline-block;
 	font-size:100px;
 	width:40%;
@@ -413,7 +518,6 @@ body{
 	line-height:100px;
 	vertical-align:bottom;
 	padding-bottom:30px;
-	p{font-size:50px;}
 		}
 /*hoverアクション用*/
 .PC-head{position: relative;}
@@ -453,6 +557,12 @@ body{
 		}
 	}
 	.top-about{
+		.PC-head p{font-size:50px;}
+		.top-about-word{font-size: 30px;}
+		p{font-size:15px;}
+	}
+	.top-news{
+		p{font-size:15px;}
 	}
 	.link{
 	}
@@ -535,6 +645,15 @@ body{
 			padding-left:20px;
 		  }
 		}
-		
+		.works-contents{
+		.works-content{
+			width:46%;
+			float:left;
+		}
 	}
+}
+}
+/* ▼PC用デザインとして付け足すデザイン ================================ */
+@media all and (min-width:1000px){
+
 }

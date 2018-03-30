@@ -13,25 +13,12 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
-$(function(){
-	
-　　var feed = new Instafeed({
-    clientId: 'e09718a390c64d60b700c0cf9a802fb6',
-    get:'user', 
-    userId:'7348609845',
-    accessToken:'7348609845.e09718a.0ba3a15c79c8487dbd0b27d399b925f2',
-    links: true,
-    limit: 4, // 取得件数 
-    resolution:'thumbnail', // thumbnail (default) - 150x150 | low_resolution - 306x306 | standard_resolution - 612x612
-    template: ' <ul><li class="col-lg-1"><a href="{{link}}" target="_blank"><img src="{{image}}"></a><p>{{caption}}</p></li></ul>' // 画像URL：{{image}} リンク：{{link}} キャプションテキスト{{caption}} いいね数：{{likes}} コメント数：{{comments}}
-});
-feed.run();
-});
+
 //loading
 $(function() {
   var h = $(window).height();
 
-  $('.main,.header,footer').hide();
+  $('.main,header,footer').hide();
   $('#loader-bg ,#loader').height(h).css('display','block');
 });
  
@@ -50,7 +37,7 @@ setTimeout(function(){
 	$('.opening').fadeOut(2000)
 },3500);
 setTimeout(function(){
-	$('.main,.header,footer').fadeIn(2000)
+	$('.main,header,footer').fadeIn(2000)
 },5500);
 setTimeout(function(){
 	$('.obj1').animate({left:"+=21%",opacity:1},2000,"swing"

@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
+	
 	<title>Yumashin</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	
 	<%= csrf_meta_tags %>
 
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="/assets/instafeed.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" type="text/css" />
-	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
 </head>
 
 <body>
 
-
-	<div class="header">
+<header>
+	<div>
+		<%= link_to "/" do %>
+        <%= image_tag("yumashin_logo.png", :class => "header-logo") %>
+        <% end %>
+	</div>
+	<nav class="g-nav">
 	<ul class="header-menus">
-		<li><img src="assets/yumashin_logo.png" class="header-logo"></li>
+		<li>
+		
 		<li>
 		<%= link_to("Top","/",class:"header-link")  %>
 		</li>
@@ -32,7 +41,25 @@
 		<%= link_to("Contact","https://thebase.in/inquiry/yumashin",class:"header-link",:target=>["_blank"]) %>
 		</li>
 	</ul>
-    </div>
+	</nav>
+	<div class="sp-menu">
+    <a href="#" class="menu-trigger" onclick="return false;">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </div>
+<!-- /ハンバーガーjava開始 -->
+  <script type="text/javascript">
+    $(function() {
+    $('.menu-trigger').click(function() {
+        $(this).toggleClass('active');
+        $('.g-nav').slideToggle(400);
+    });
+});
+  </script>
+<!-- /ハンバーガーjava終了 -->
+</header>
 
 	<footer>
 		<ul class="footer-menus">
