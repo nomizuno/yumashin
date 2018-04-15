@@ -17,12 +17,11 @@
 //loading
 $(function() {
   var h = $(window).height();
-
   $('.main,header,footer').hide();
   $('#loader-bg ,#loader').height(h).css('display','block');
 });
- 
-$(window).on("load",function () { //全ての読み込みが完了したら実行
+$(window).on("load",function () {
+	//全ての読み込みが完了したら実行
   $('#loader-bg').delay(900).fadeOut(800);
   $('#loader').delay(600).fadeOut(300);
   $('.obj1').addClass('change');
