@@ -16,6 +16,7 @@
 
 //loading
 $(function() {
+	---
   var h = $(window).height();
   $('.main,header,footer').hide();
   $('#loader-bg ,#loader').height(h).css('display','block');
